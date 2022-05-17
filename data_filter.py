@@ -127,27 +127,6 @@ def run():
         print(worker)
 
     #callege with list comprenhesion------------------
-    #LIST COMPREHENSIONS
-    all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python"]
-    all_platzi_workers = [worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
-
-    for worker in all_python_devs:
-        print(worker)
-
-    for workerplatzi in all_platzi_workers:
-        print(workerplatzi)    
-
-    #-------------------------------------------------------------------------
-    print()
-    print("High order Functions")
-
-    #high order functions
-    adults = list(filter(lambda worker: worker["age"] > 18, DATA))
-    #le concatena la key old y su valor si es True or false,  | concatena la key al diccionario existente
-    old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
-
-
-
     adults_2 = [worker["name"] for worker in DATA  if worker["age"] > 18]
     for worker in adults_2:
         print(worker)
